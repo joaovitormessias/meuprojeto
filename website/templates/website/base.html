@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Meu Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <header class="site-header">
+        <h1 class="logo"><a href="{% url 'home' %}">Meu Site</a></h1>
+        <nav class="nav">
+            <a href="{% url 'home' %}">Início</a>
+            <a href="{% url 'sobre' %}">Sobre</a>
+            <a href="{% url 'contato' %}">Contato</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <small>© {{ now|default:2025 }} - Exemplo Django</small>
+    </footer>
+</body>
+</html>

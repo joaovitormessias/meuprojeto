@@ -1,0 +1,15 @@
+{% extends 'website/base.html' %}
+{% block title %}Página inicial{% endblock %}
+{% block body_class %}home{% endblock %}
+{% block content %}
+    <h2>Bem-vindo!</h2>
+    <p>Este é um exemplo simples de projeto Django com rotas e templates.</p>
+    <ul>
+        <li>Rota <code>/</code>: esta página</li>
+        <li>Rota <code>/sobre/</code>: informações sobre o site</li>
+        <li>Rota <code>/contato/</code>: como falar com a gente</li>
+    </ul>
+    <p>
+        <img src="https://placehold.co/600x200?text=Home" alt="Banner da Home" class="banner">
+    </p>
+{% endblock %}
