@@ -131,3 +131,13 @@ a.button.primary:hover {
     background: var(--primary-dark);
 }
 
+/* Sticky footer */
+html, body { height: 100%; }
+body {
+  min-height: 100dvh;      /* usa a altura da viewport */
+  display: flex;
+  flex-direction: column;
+}
+.site-footer {
+  margin-top: auto;         /* empurra o footer para o fim */
+}
